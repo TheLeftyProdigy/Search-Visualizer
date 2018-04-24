@@ -1,0 +1,73 @@
+body {
+    background-color: #FFF9FB;
+}
+
+.back-button {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-column-gap: 20px;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    grid-template-areas: "column-left column-right column-right"
+    ". description ."
+    ". simulation ."
+    ". code-editor ."
+    ". end-credits end-credits";
+}
+
+.column-left {
+    grid-area: column-left;
+}
+
+.column-right {
+    grid-area: column-right;
+    font-family: "IBM Plex Sans SemiBold", SansSerif, monospace;
+    font-size: 100px;
+    color: #252627;
+    display: block;
+}
+
+.description{
+    grid-area: description;
+}
+
+.simulation {
+    grid-area: simulation;
+    width: 100%;
+}
+
+.code-editor {
+    grid-area: code-editor;
+}
+
+.end-credits {
+    grid-area: end-credits;
+}
+
+h1{
+    font-family: "IBM Plex Sans Medium", SansSerif, monospace;
+    font-size: 50px;
+    color: #252627;
+    display: block;
+}
+
+p{
+    margin-top:-30px;
+    font-family: "IBM Plex Sans", SansSerif, monospace;
+    font-size: 30px;
+    color: #252627;
+    display: block;
+}
+
+#emp{
+    font-family: "IBM Plex Sans SemiBold", SansSerif, monospace;
+    font-size: 40px;
+    color: #252627;
+    display: block;
+}

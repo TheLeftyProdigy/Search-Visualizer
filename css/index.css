@@ -1,0 +1,18 @@
+body {
+    margin: 90px;
+    background-color: #FFF9FB;
+}
+
+.topic_text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-family: "IBM Plex Sans Medium", SansSerif, monospace;
+    font-size: 100px;
+    color: #252627;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
