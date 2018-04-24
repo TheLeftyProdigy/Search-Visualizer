@@ -2,6 +2,7 @@
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/sequential_search.css">
+<link rel="stylesheet" type="text/css" href="css/sequential_search_color_grid.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
@@ -43,9 +44,38 @@
         </p>
         <div id = "emp">Give it a Try!</div>
     </div>
-    <div class="simulation">
+    <div class = "color-selector">
         <h1>SIMULATION</h1>
+        <div class="color-grid">
+            <div class="c0 box"></div>
+            <div class="c1 box"></div>
+            <div class="c2 box"></div>
+            <div class="c3 box"></div>
+            <div class="c4 box"></div>
+            <div class="c5 box"></div>
+            <div class="c6 box"></div>
+            <div class="c7 box"></div>
+            <div class="c8 box"></div>
+            <div class="c9 box"></div>
+            <div class="c10 box"></div>
+            <div class="c11 box"></div>
+            <div class="c12 box"></div>
+            <div class="c13 box"></div>
+            <div class="c14 box"></div>
+            <div class="c15 box"></div>
+            <div class="chosen box1"></div>
+            <div class="user">
+                <h1 id="chosen-text">You Chose the color:</h1>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="simulation">
         <div id="sketch-holder"></div>
+        <h1 id="colored-pen-count">Iteration Number: 0</h1>
+
     </div>
     <div class="code-editor">
         <h1>Code Editor PlaceHolder</h1>

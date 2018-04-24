@@ -16,6 +16,7 @@ body {
     grid-row-gap: 20px;
     grid-template-areas: "column-left column-right column-right"
     ". description ."
+    ". color-selector ."
     ". simulation ."
     ". code-editor ."
     ". end-credits end-credits";
@@ -23,6 +24,7 @@ body {
 
 .column-left {
     grid-area: column-left;
+    position: fixed;
 }
 
 .column-right {
@@ -31,6 +33,10 @@ body {
     font-size: 100px;
     color: #252627;
     display: block;
+}
+
+#colored-pen-count{
+    font-size:30px;
 }
 
 .description{
@@ -48,6 +54,10 @@ body {
 
 .end-credits {
     grid-area: end-credits;
+}
+
+.color-selector{
+    grid-area: color-selector;
 }
 
 h1{
@@ -71,3 +81,5 @@ p{
     color: #252627;
     display: block;
 }
+
+

@@ -1,0 +1,103 @@
+.color-grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-column-gap: 20px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-row-gap: 20px;
+    grid-template-areas: "c0 c1 c2 c3 . . . ."
+    "c4 c5 c6 c7 . user user chosen"
+    "c8 c9 c10 c11 . . . ."
+    "c12 c13 c14 c15 . . . ."
+}
+
+#chosen-text{
+    margin-top:-5px;
+    font-size:40px;
+}
+.user{
+    grid-area:user;
+}
+.chosen{
+    grid-area:chosen;
+    background: #FFF9FB;
+}
+
+.box1{
+    width: 100px;
+    height:100px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.c0{
+    grid-area: c0;
+    background: #55505C;
+}
+
+.c1{
+    grid-area: c1;
+    background: #EFCA08;
+}
+
+.c2{
+    grid-area: c2;
+    background: #333533;
+}
+.c3{
+    grid-area: c3;
+    background: #5F1A37;
+}
+.c4 {
+    grid-area: c4;
+    background: #EEC170;
+}
+.c5{
+    grid-area: c5;
+    background: #094074;
+}
+.c6{
+    grid-area: c6;
+    background: #F08700;
+}
+.c7{
+    grid-area: c7;
+    background: #EF6F6C;
+}
+.c8{
+    grid-area: c8;
+    background: #531CB3;
+}
+.c9{
+    grid-area: c9;
+    background: #832232;
+}
+.c10{
+    grid-area: c10;
+    background: #776885;
+}
+.c11{
+    grid-area: c11;
+    background: #00A6A6;
+}
+.c12{
+    grid-area: c12;
+    background: #AB4E68;
+}
+.c13{
+    grid-area: c13;
+    background: #272635;
+}
+.c14{
+    grid-area: c14;
+    background: #7FC6A4;
+}
+.c15{
+    grid-area: c15;
+    background: #F5CB5C;
+}
+
+
+
