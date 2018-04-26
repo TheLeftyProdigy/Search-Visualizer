@@ -1,14 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/binary_search.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-<script src="js/binary_search.js"></script>
+
+
 <head>
     <meta charset="UTF-8">
     <title>Binary Search</title>
+    <link rel="stylesheet" type="text/css" href="css/binary_search.css">
+    <link rel="stylesheet" type="text/css" href="css/binary_flipbook.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://www.turnjs.com/lib/turn.min.js"></script>
+    <script src="js/binary_flipbook.js"></script>
+    <script src="js/binary_search.js"></script>
 </head>
 <body>
+<div class="wrapper">
+    <div class="column-left">
+        <a href="index.html">
+            <img src="assets/back-button.svg" class="back-button"/>
+        </a>
+    </div>
+
+    <div class="column-right">
+        BINARY SEARCH
+    </div>
+
+    <div class="description">
+        <h1>INTRODUCTION</h1>
+        <p>
+            Imagine you have a dictionary, and want to find some words in it. But you want to do this without going
+            through the whole dictionary. So what do you do? You use the <b class="emp">binary search method</b>. You
+            open it right down in
+            the middle, and check a random word from the page where you opened it. Now, if your word starts with the
+            letter Q and the word you found in the middle starts with letter G, you know that the whole first half of
+            the dictionary is useless to you right now, since the word is definitely in the second half. So you only
+            need to search further in the second half. And you can treat the second half as a whole dictionary, and do
+            the same thing: open at <b class="emp">3/4</b> of the dictionary, check a random word and split in half
+            again, and so on.
+            <br>
+            <br>
+            Similarly when we have to search within an array we compare the number to be searched with the middle
+            element of the array, if the number is greater than the middle element we search the latter half of the
+            array while we search the former half if the value is smaller.
+        </p>
+    </div>
+    <div class="color-selector">
+        <h1>SIMULATION</h1>
+        <h1 id="user-input">Enter the Page Number that you want to Search for: <input id="input" title="user-input"
+                                                                                      type="number"/></h1>
+    </div>
+
+    <div class="fb">
+
+        <button id="previous">Press Me for previous</button>
+        <button id="next">Press Me for Next</button>
+        <div id="flipbook">
+            <div class="hard"><img src="assets/pages/hardcover-front.png"/></div>
+            <div class="hard"><img src="assets/pages/hardcover-front-inner.png"/></div>
+            <div id="p1"><img src="assets/pages/Page-1.png"/></div>
+            <div id="p2"><img src="assets/pages/Page-2.png"/></div>
+            <div id="p3"><img src="assets/pages/Page-3.png"/></div>
+            <div id="p4"><img src="assets/pages/Page-4.png"/></div>
+            <div id="p5"><img src="assets/pages/Page-5.png"/></div>
+            <div id="p6"><img src="assets/pages/Page-6.png"/></div>
+            <div id="p7"><img src="assets/pages/Page-7.png"/></div>
+            <div id="p8"><img src="assets/pages/Page-8.png"/></div>
+            <div id="p9"><img src="assets/pages/Page-9.png"/></div>
+            <div id="p10"><img src="assets/pages/Page-10.png"/></div>
+            <div id="p11"><img src="assets/pages/Page-11.png"/></div>
+            <div id="p12"><img src="assets/pages/Page-12.png"/></div>
+            <div id="p13"><img src="assets/pages/Page-13.png"/></div>
+            <div id="p14"><img src="assets/pages/Page-14.png"/></div>
+            <div id="p15"><img src="assets/pages/Page-15.png"/></div>
+            <div id="p16"><img src="assets/pages/Page-16.png"/></div>
+            <div id="p17"><img src="assets/pages/Page-17.png"/></div>
+            <div id="p18"><img src="assets/pages/Page-18.png"/></div>
+            <div id="p19"><img src="assets/pages/Page-19.png"/></div>
+            <div id="p20"><img src="assets/pages/Page-20.png"/></div>
+            <div class="hard"><img src="assets/pages/hardcover-front-inner.png"/></div>
+            <div class="hard"><img src="assets/pages/hardcover-back.png"/></div>
+        </div>
+    </div>
+    <div class="code-editor">
+        <h1>Code Editor PlaceHolder</h1>
+    </div>
+    <div class="end-credits">
+        <h1>End Credits PlaceHolder</h1>
+    </div>
+</div>
 
 </body>
-</html>
+</html>-

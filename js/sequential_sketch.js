@@ -17,17 +17,20 @@ function preload() {
     }
     robotic_arm = loadImage('assets/robotic-arm.png');
     railing = loadImage('assets/railing.png');
-}
 
-function setup() {
-    let canvas = createCanvas(1090 * scale, 510 * scale);
-    canvas.parent('sketch-holder');
-
-    let i;
     for (i = 0; i < img.length; i++) {
         img[i].loadPixels();
     }
 
+}
+
+function setup() {
+    let canvas = createCanvas(1090 * scale, 480 * scale);
+    canvas.parent('sketch-holder');
+
+    let i;
+
+    smooth();
     robotic_arm.loadPixels();
     railing.loadPixels();
     pos_x = -100;
@@ -55,6 +58,7 @@ function draw() {
     box_check();
 
     if (started) {
+
 
         image(robotic_arm, pos_x, 25, (robotic_arm.width * scale) / 1.6, (robotic_arm.height * scale) / 1.6);
         //Robotic Arm Movement

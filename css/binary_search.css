@@ -1,0 +1,121 @@
+body {
+    background-color: #FFF9FB;
+}
+
+.back-button {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-column-gap: 20px;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    grid-template-areas: "column-left column-right column-right"
+    ". description ."
+    ". color-selector ."
+    ". flipbook-viewport ."
+    ". code-editor ."
+    ". end-credits end-credits";
+}
+
+.column-left {
+    grid-area: column-left;
+    position: fixed;
+}
+
+.column-right {
+    grid-area: column-right;
+    font-family: "IBM Plex Sans SemiBold", SansSerif, monospace;
+    font-size: 100px;
+    color: #252627;
+    display: block;
+}
+
+#colored-pen-count{
+    font-size:30px;
+}
+
+.description{
+    grid-area: description;
+}
+
+.fb {
+    grid-area: flipbook-viewport;
+}
+
+.code-editor {
+    grid-area: code-editor;
+}
+
+.end-credits {
+    grid-area: end-credits;
+}
+
+.color-selector{
+    grid-area: color-selector;
+}
+
+h1{
+    font-family: "IBM Plex Sans Medium", SansSerif, monospace;
+    font-size: 50px;
+    color: #252627;
+    display: block;
+}
+
+p{
+    margin-top:-30px;
+    font-family: "IBM Plex Sans", SansSerif, monospace;
+    font-size: 30px;
+    color: #252627;
+    display: block;
+}
+
+#emp{
+    font-family: "IBM Plex Sans SemiBold", SansSerif, monospace;
+    font-size: 40px;
+    color: #252627;
+    display: block;
+}
+
+#user-input{
+    font-size:30px;
+}
+
+#input{
+    font-family: "IBM Plex Sans Medium", SansSerif, monospace;
+    font-size: 30px;
+    color: #252627;
+    display: inline-block;
+    background: transparent;
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    text-align: center;
+    width:70px;
+
+}
+
+input,
+textarea,
+select {
+    outline: 0;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    border: solid 2px #252627;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
