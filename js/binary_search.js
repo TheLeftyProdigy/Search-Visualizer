@@ -1,3 +1,10 @@
+let tweener = function () {
+    TweenLite.to(".back-button", 2.3, {css: {backgroundColor: "#D3D4D9"}, ease: Power2.easeOut});
+    TweenLite.to("body",2.3,{css:{opacity:1},ease:Power2.easeOut});
+};
+
+window.onload = tweener;
+
 let data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 let out = [];
 let middle;

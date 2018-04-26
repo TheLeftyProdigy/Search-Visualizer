@@ -1,14 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/fibonaccian_search.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-<script src="js/fibonaccian_search.js"></script>
+
+
 <head>
     <meta charset="UTF-8">
     <title>Fibonaccian Search</title>
+    <link rel="stylesheet" type="text/css" href="css/binary_search.css">
+    <link rel="stylesheet" type="text/css" href="css/binary_flipbook.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://www.turnjs.com/lib/turn.min.js"></script>
+    <script src="js/fibonaccian_flipbook.js"></script>
+    <script src="js/fibonaccian_search.js"></script>
 </head>
 <body>
+<div class="wrapper">
+    <div class="column-left">
+        <a href="index.html">
+            <img src="assets/back-button.svg" class="back-button"/>
+        </a>
+    </div>
+
+    <div class="column-right" id="seqtitle">
+        FIBONACCIAN SEARCH
+    </div>
+
+    <div class="description">
+        <h1>INTRODUCTION</h1>
+        <p>
+            <b>1. </b>The working of Fibonacci Search includes dividing the array into unequal parts.<br>
+            <b>2. </b>We first find the smallest fibonacci number (m) that is greater than or equal to the length of the array.<br>
+            <b>3. </b>Next we search for the element at index i = (m-2).<br>
+            <b>4. </b>If the number to be searched is greater than the number at the index then we recursively search the latter
+            part of the array else, we recursively search the earlier part of array.<br>
+
+        </p>
+    </div>
+    <div class="color-selector">
+        <h1>SIMULATION</h1>
+        <h1 id="user-input">Enter the page number (1-20) that you want to search for, and press Enter: <input id="input"
+                                                                                                              title="user-input"
+                                                                                                              type="number"/>
+        </h1>
+        <h1 id="curr">Current Page: None</h1>
+        <h1 id="iterations">Iteration Number: 0</h1>
+    </div>
+
+    <div class="imgbuttons">
+        <img src="assets/misc/previous-button.png" id="previous"/>
+        <img src="assets/misc/three-dots.png" id="threedots"/>
+        <img src="assets/misc/next-button.png" id="next"/>
+    </div>
+
+    <div class="fb">
+
+        <div id="flipbook">
+            <div class="hard"><img src="assets/pages/hardcover-front.png"/></div>
+            <div class="hard"><img src="assets/pages/hardcover-front-inner.png"/></div>
+            <div id="p1"><img src="assets/pages/Page-1.png"/></div>
+            <div id="p2"><img src="assets/pages/Page-2.png"/></div>
+            <div id="p3"><img src="assets/pages/Page-3.png"/></div>
+            <div id="p4"><img src="assets/pages/Page-4.png"/></div>
+            <div id="p5"><img src="assets/pages/Page-5.png"/></div>
+            <div id="p6"><img src="assets/pages/Page-6.png"/></div>
+            <div id="p7"><img src="assets/pages/Page-7.png"/></div>
+            <div id="p8"><img src="assets/pages/Page-8.png"/></div>
+            <div id="p9"><img src="assets/pages/Page-9.png"/></div>
+            <div id="p10"><img src="assets/pages/Page-10.png"/></div>
+            <div id="p11"><img src="assets/pages/Page-11.png"/></div>
+            <div id="p12"><img src="assets/pages/Page-12.png"/></div>
+            <div id="p13"><img src="assets/pages/Page-13.png"/></div>
+            <div id="p14"><img src="assets/pages/Page-14.png"/></div>
+            <div id="p15"><img src="assets/pages/Page-15.png"/></div>
+            <div id="p16"><img src="assets/pages/Page-16.png"/></div>
+            <div id="p17"><img src="assets/pages/Page-17.png"/></div>
+            <div id="p18"><img src="assets/pages/Page-18.png"/></div>
+            <div id="p19"><img src="assets/pages/Page-19.png"/></div>
+            <div id="p20"><img src="assets/pages/Page-20.png"/></div>
+            <div class="hard"><img src="assets/pages/hardcover-front-inner.png"/></div>
+            <div class="hard"><img src="assets/pages/hardcover-back.png"/></div>
+        </div>
+    </div>
+    <div class="code-editor">
+        <h1>LIVE CODE EDITOR</h1>
+        <p>Below is a Code Simulation for Fibonaccian Search. If you wish to tinker with the code, just copy it and click
+            on the link to the Live Code Editor.</p>
+        <iframe width="900" height="600" frameborder="0" id="codeframe" src="http://pythontutor.com/iframe-embed.html#code=def%20fibonaccianSearch%28arr,%20x,%20n%29%3A%0A%20%20%20%20fibMMm2%20%3D%200%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23intialize%20%28m-2%29h%20fibbonaci%20number%0A%20%20%20%20fibMMm1%20%3D%201%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23intialize%20%28m-1%29th%20fibonacci%20number%0A%20%20%20%20fibM%20%3D%20fibMMm2%20%2B%20fibMMm1%20%20%20%20%20%20%20%20%20%20%20%23mth%20fibbonaci%20number%0A%20%20%20%20while%20%28fibM%20%3C%20n%29%3A%0A%20%20%20%20%20%20%20%20fibMMm2%20%3D%20fibMMm1%0A%20%20%20%20%20%20%20%20fibMMm1%20%3D%20fibM%0A%20%20%20%20%20%20%20%20fibM%20%3D%20fibMMm2%20%2B%20fibMMm1%0A%0A%20%20%20%20offset%20%3D%20-1%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23offset%20will%20store%20the%20range%20up%20till%20which%20the%20array%20has%20been%20eliminated%0A%0A%20%20%20%20while%20%28fibM%20%3E%201%29%3A%0A%20%20%20%20%20%20%20%20i%20%3D%20min%28offset%2BfibMMm2,%20n-1%29%20%20%23check%20the%20validity%20of%20m-2%20fibbonaci%20number%0A%20%20%20%20%20%20%20%20if%20%28arr%5Bi%5D%20%3C%20x%29%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23compare%20the%20element%20with%20the%20number%20to%20be%20searched%0A%20%20%20%20%20%20%20%20%20%20%20%20fibM%20%3D%20fibMMm1%20%20%20%20%20%20%20%20%20%20%20%20%23update%20value%20of%20fibbonaci%20number%20in%20accordance%20with%20the%20new%20array%0A%20%20%20%20%20%20%20%20%20%20%20%20fibMMm1%20%3D%20fibMMm2%0A%20%20%20%20%20%20%20%20%20%20%20%20fibMMm2%20%3D%20fibM%20-%20fibMMm1%0A%20%20%20%20%20%20%20%20%20%20%20%20offset%20%3D%20i%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23update%20value%20of%20offset%20up%20till%20the%20checked%20index%0A%20%20%20%20%20%20%20%20elif%20%28arr%5Bi%5D%20%3E%20x%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20fibM%20%3D%20fibMMm2%0A%20%20%20%20%20%20%20%20%20%20%20%20fibMMm1%20%3D%20fibMMm1%20-%20fibMMm2%0A%20%20%20%20%20%20%20%20%20%20%20%20fibMMm2%20%3D%20fibM%20-%20fibMMm1%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20i%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23return%20index%20when%20element%20has%20been%20found%0A%0A%20%20%20%20return%20-1%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23return%20-1%20if%20element%20not%20found%0A%0Aarr%20%3D%20%5B%202,%203,%204,%2010,%2040%20%5D%0An%20%3D%20len%28arr%29%0Ax%20%3D4%0Aprint%28fibonaccianSearch%28arr,%20x,%20n%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+        <div id="copycode">
+            <script src="https://ideone.com/e.js/tllPLb" type="text/javascript" ></script>
+        </div>
+
+        <a href="http://localhost:8003/visualize.html#mode=edit" target="_blank" id="editorlink"><b>COPY THE ABOVE CODE
+            AND CLICK ME</b></a>
+    </div>
+    <div class="end-credits">
+        <h1>ADDITIONAL INFORMATION</h1>
+        <p>
+            The algorithm divides the array in unequal parts. The time complexity is <b>O(log n)</b>.<br>
+            While the Binary search algorithm always divides the array in 2 equal halves,<br> Fibonacci Search actually divides the given array in unequal parts.<br>
+            Binary Search uses division operator to divide range. Fibonacci Search doesn’t use divide, but uses plus and minus.<br>
+            The division operator may be heavy for some CPUs.
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
+    </div>
+</div>
 
 </body>
-</html>
+</html>-

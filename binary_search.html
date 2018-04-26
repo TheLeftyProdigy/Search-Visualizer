@@ -22,7 +22,7 @@
         </a>
     </div>
 
-    <div class="column-right">
+    <div class="column-right" id="seqtitle">
         BINARY SEARCH
     </div>
 
@@ -47,9 +47,9 @@
     </div>
     <div class="color-selector">
         <h1>SIMULATION</h1>
-        <h1 id="user-input">Enter the page number that you want to search for, and press Enter: <input id="input"
-                                                                                                      title="user-input"
-                                                                                                      type="number"/>
+        <h1 id="user-input">Enter the page number (1-20) that you want to search for, and press Enter: <input id="input"
+                                                                                                              title="user-input"
+                                                                                                              type="number"/>
         </h1>
         <h1 id="curr">Current Page: None</h1>
         <h1 id="iterations">Iteration Number: 0</h1>
@@ -92,9 +92,26 @@
     </div>
     <div class="code-editor">
         <h1>LIVE CODE EDITOR</h1>
+        <p>Below is a Code Simulation for Binary Search. If you wish to tinker with the code, just copy it and click
+            on the link to the Live Code Editor.</p>
+        <iframe id="codeframe" width="900" height="600" frameborder="0"
+                src="http://pythontutor.com/iframe-embed.html#code=def%20binarySearch%28alist,%20item%29%3A%0A%20%20%20%20first%20%3D%200%0A%20%20%20%20last%20%3D%20len%28alist%29-1%0A%20%20%20%20found%20%3D%20False%0A%20%0A%20%20%20%20while%20first%3C%3Dlast%20and%20not%20found%3A%0A%20%20%20%20%20%20%20%20midpoint%20%3D%20%28first%20%2B%20last%29//2%20%20%20%20%23Calculate%20mid%20point%0A%20%20%20%20%20%20%20%20if%20alist%5Bmidpoint%5D%20%3D%3D%20item%3A%20%20%20%20%20%20%20%20%23Check%20if%20mid%20point%20equal%20to%20the%20item%20being%20searched%0A%20%20%20%20%20%20%20%20%20%20%20%20found%20%3D%20True%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20item%20%3C%20alist%5Bmidpoint%5D%3A%20%20%20%20%23Check%20if%20item%20at%20mid%20point%20is%20greater%20than%20the%20item%20being%20searched%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20last%20%3D%20midpoint-1%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20first%20%3D%20midpoint%2B1%0A%20%0A%20%20%20%20return%20found%0Atestlist%20%3D%20%5B0,%201,%202,%208,%2013,%2017,%2019,%2032,%2042%5D%20%23Test%20List%0Aprint%28binarySearch%28testlist,%203%29%29%0Aprint%28binarySearch%28testlist,%2013%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
+        <div id="copycode">
+            <script src="https://ideone.com/e.js/om1WoI" type="text/javascript"></script>
+        </div>
+
+        <a href="http://localhost:8003/visualize.html#mode=edit" target="_blank" id="editorlink"><b>COPY THE ABOVE CODE
+            AND CLICK ME</b></a>
     </div>
     <div class="end-credits">
-        <h1></h1>
+        <h1>ADDITIONAL INFORMATION</h1>
+        <p>
+            Binary search works only when the array is sorted. The algorithm splits the array into two equal parts. <br>The time complexity of binary search is <b>O(log n)</b>.
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
     </div>
 </div>
 
